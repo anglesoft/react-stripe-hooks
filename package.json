@@ -1,0 +1,17 @@
+{
+  "name": "react-stripe-hooks",
+  "version": "1.0.0",
+  "description": "Bringing React Hooks to Stripe",
+  "main": "index.js",
+  "repository": "anglesoft/react-stripe-hooks",
+  "author": "Angle Software",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-stripe-elements": "^5.0.0"
+  }
+}
