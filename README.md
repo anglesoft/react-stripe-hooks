@@ -25,7 +25,7 @@ export function PaymentForm() {
         email: '',
     })
 
-    const submit = event => {
+    const handleSubmit = event => {
         event.preventDefault()
 
         const paymentMethod = {
@@ -48,7 +48,7 @@ export function PaymentForm() {
 
     return (
         <StripeProvider apiKey="yourstripeapikey">
-            <form onSubmit={event => submit(event)}>
+            <form onSubmit={event => handleSubmit(event)}>
                 {/* Name input */}
                 {/* Email input */}
 
