@@ -37,11 +37,11 @@ export function PaymentForm() {
             }
         }
 
-        stripe.handleCardPayment(clientSecret, paymentMethod).then(response => {
-            if (response.error) {
-                console.error(response.error.message)
+        stripe.handleCardPayment(clientSecret, paymentMethod).then(result => {
+            if (result.error) {
+                console.error(result.error.message)
             } else {
-                console.log(response.paymentIntent.payment_method)
+                console.log(result.paymentIntent.payment_method)
             }
         });
     }
