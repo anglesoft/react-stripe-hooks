@@ -17,7 +17,15 @@ import React, { useState } from 'react'
 import { StripeProvider, useStripe } from 'react-stripe-hooks'
 import { CardElement } from 'react-stripe-elements'
 
-export function PaymentForm() {
+function PaymentForm() {
+    return (
+        <StripeProvider apiKey="yourstripeapikey">
+            <Form />
+        </StripeProvider>
+    )
+}
+
+function Form() {
     const stripe = useStripe()
 
     const [formState, setFormState] = useState({
@@ -47,14 +55,12 @@ export function PaymentForm() {
     }
 
     return (
-        <StripeProvider apiKey="yourstripeapikey">
-            <form onSubmit={event => handleSubmit(event)}>
-                {/* Name input */}
-                {/* Email input */}
+        <form onSubmit={event => handleSubmit(event)}>
+            {/* Name input */}
+            {/* Email input */}
 
-                <CardElement />
-            </form>
-        </StripeProvider>
+            <CardElement />
+        </form>
     )
 }
 ```
