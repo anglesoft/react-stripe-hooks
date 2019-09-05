@@ -3,7 +3,7 @@ import { StripeProvider as StripeBaseProvider, Elements, injectStripe } from 're
 
 const Context = createContext()
 
-export const useStripe = () => useContext(Context)
+const useStripe = () => useContext(Context)
 
 const HookProvider = ({ children, stripe }) => (
     <Context.Provider value={stripe}>
@@ -11,9 +11,9 @@ const HookProvider = ({ children, stripe }) => (
     </Context.Provider>
 )
 
-export const StripeHookProvider = injectStripe(HookProvider)
+const StripeHookProvider = injectStripe(HookProvider)
 
-export const StripeProvider = ({ apiKey, children }) => (
+const StripeProvider = ({ apiKey, children }) => (
     <StripeBaseProvider apiKey={apiKey}>
         <Elements>
             <StripeHookProvider>
@@ -22,3 +22,9 @@ export const StripeProvider = ({ apiKey, children }) => (
         </Elements>
     </StripeBaseProvider>
 )
+
+export {
+    useStripe,
+    StripeHookProvider,
+    StripeProvider,
+}
