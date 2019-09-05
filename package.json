@@ -1,6 +1,6 @@
 {
     "name": "react-stripe-hooks",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "description": "Bringing React Hooks to Stripe",
     "main": "index.js",
     "repository": "anglesoft/react-stripe-hooks",
