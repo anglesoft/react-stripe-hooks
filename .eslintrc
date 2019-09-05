@@ -1,25 +1,23 @@
-module.exports = {
-    env: {
-        browser: true,
-        es6: true,
-    },
-    extends: ['eslint:recommended', 'plugin:react/recommended'],
-    parserOptions: {
-        sourceType: 'module',
-        ecmaVersion: 2018,
-    },
-    plugins: ['react-hooks'],
-    rules: {
-        indent: ['error', 2],
-        quotes: ['warn', 'single'],
-        semi: ['warn', 'never'],
-        'comma-dangle': ['warn', 'always-multiline'],
-        'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'warn',
-    },
-    settings: {
-        react: {
-            version: 'detect'
-        }
-    }
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "standard-react"
+  ],
+  "env": {
+    "es6": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    // don't force es6 functions to include space before paren
+    "space-before-function-paren": 0,
+
+    // allow specifying true explicitly for boolean props
+    "react/jsx-boolean-value": 0
+  }
 }
