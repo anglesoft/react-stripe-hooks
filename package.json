@@ -1,17 +1,25 @@
 {
-  "name": "react-stripe-hooks",
-  "version": "1.1.1",
-  "description": "Bringing React Hooks to Stripe",
-  "main": "index.js",
-  "repository": "anglesoft/react-stripe-hooks",
-  "author": "Angle Software",
-  "license": "MIT",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-stripe-elements": "^5.0.0"
-  }
+    "name": "react-stripe-hooks",
+    "version": "1.1.1",
+    "description": "Bringing React Hooks to Stripe",
+    "main": "index.js",
+    "repository": "anglesoft/react-stripe-hooks",
+    "author": "Angle Software",
+    "license": "MIT",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "eslint": "^6.1.0",
+        "eslint-plugin-react": "^7.14.3",
+        "eslint-plugin-react-hooks": "^1.7.0",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "react-stripe-elements": "^5.0.0"
+    },
+    "peerDependencies": {
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "react-stripe-elements": "^5.0.0"
+    }
 }
