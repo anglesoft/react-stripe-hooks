@@ -13,8 +13,8 @@ const HookProvider = ({ children, stripe }) => (
 
 const StripeHookProvider = injectStripe(HookProvider)
 
-const StripeProvider = ({ apiKey, children }) => (
-    <StripeBaseProvider apiKey={apiKey}>
+const StripeProvider = ({ apiKey, children, stripe }) => (
+    <StripeBaseProvider apiKey={apiKey} stripe={stripe}>
         <Elements>
             <StripeHookProvider>
                 {children}
