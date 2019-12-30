@@ -26,7 +26,7 @@ function PaymentForm() {
 }
 
 function Form() {
-    const stripe = useStripe()
+    const { stripe, elements } = useStripe()
 
     const [formState, setFormState] = useState({
         name: '',
@@ -37,6 +37,12 @@ function Form() {
         event.preventDefault()
 
         const paymentMethod = {
+            payment_method: {
+                card: elements.getElement('card'),
+                billing_details: {
+                    name: 'Jenny Rosen',
+                },
+            },
             payment_method_data: {
                 billing_details: {
                     name: formState.name,
