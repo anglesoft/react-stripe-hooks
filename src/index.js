@@ -5,8 +5,8 @@ const Context = createContext()
 
 const useStripe = () => useContext(Context)
 
-const HookProvider = ({ children, stripe }) => (
-    <Context.Provider value={stripe}>
+const HookProvider = ({ children, stripe, elements }) => (
+    <Context.Provider value={{ stripe, elements }}>
         {children}
     </Context.Provider>
 )
