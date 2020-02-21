@@ -1,3 +1,5 @@
+:warning: There is now official support for React Hooks builtin the official Stripe React components, I strongly advise you use this instead: https://github.com/stripe/react-stripe-js
+
 # React Stripe Hooks
 
 ## Introduction
